@@ -1,0 +1,41 @@
+1. Three pieces of data to store for each book:
+   Book Identifier - Like the book id to know which book is borrowed.
+
+   Borrower Identification - To know who has borrowed it.
+
+   Due Date - to track when it should be returned.
+
+
+2. How to prevent the same book from being borrowed twice:
+
+   Every book should have a unique Identifier and before a borrowing transaction is carried out 
+   check the database if the borrowing status of the book is available, if not do not allow transaction.
+
+
+3. Scaling to 10,000 books and 1,000 users — what needs to change:
+
+   Using relational databases such as MySQl which gives structured storage and automatic indexing.
+
+   Index important columns like book ID, borrower ID and due date for faster look up.
+
+   Enforcing constraints to prevent error:
+    Primary keys on book IDs and user IDs to ensure uniqueness.
+    Foreign keys link borrow records to valid books and users.
+
+   Optimizing the queries and data model
+    Store status - available or borrowed
+    Efficient Joins between tables to avoid storing redundant data.
+
+
+4. Store book info and borrowing record together or separately — why?
+
+   The book information and borrowing record separately.
+   Seperation of concerns -Book info is permanent data about the book, while borrowing records change each time a book is borrowed.
+
+   Avoid redundancy - if a book is borrowed mutiple times, storing the titile and author in every record wastes space and risks inconsistent data.
+
+   Easy updates - Book details can be updated without touching past borrowing records, and vice versa.
+
+   It keeps history - Past borrow records can be kept even if the book's details change later.
+
+   
