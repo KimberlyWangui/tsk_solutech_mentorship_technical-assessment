@@ -10,8 +10,8 @@ Please record a 3–4 minute video introducing yourself. Include:
 - What excites you about tech and your goals
 - Anything else you'd love to share
 
-📎 **Paste Video Link: here** 
-
+## 🎥 Video Link
+Watch my 3–4 minute introduction here: [Click to Watch on YouTube](https://youtu.be/vuKoGForoww)
 ---
 
 ## ✅ Step 1: Record Your Video
